@@ -1,0 +1,45 @@
+<html>
+<head>
+<title> CWC App</title >
+<style>
+ * {font-size:50px ; font-family:Courier ;}
+body{background-color:lightblue;}
+#ans {border-style:solid; width:50% ; border-radius:50px;}
+
+</style>
+
+
+</head>
+
+<body>
+<center
+
+   <h1> Character Word Counter </h1>
+   <textarea placeholder = "enter text " id = "txt" rows=4 cols=30></textarea>
+  <br/><br/>
+
+   <h1 id = "ans" > </h1>
+<script>
+  let txt = document.getElementById("txt");
+  let ans = document.getElementById("ans");
+
+  txt.addEventListener("input",function() {
+     let c = txt.value.length;
+     let w = txt.value.split(" ").length;
+     if(c==0)
+       w=0;
+     let msg = "Char : " + c + " Word : " + w ;
+     ans.innerHTML = msg;
+     });
+
+
+
+</script>
+
+</center>
+</body>
+
+
+
+
+</html>
